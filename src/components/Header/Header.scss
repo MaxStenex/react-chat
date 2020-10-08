@@ -1,0 +1,38 @@
+.header {
+  background-color: #4f8dc6;
+  &__content {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+  }
+
+  &__logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  &__log-panel {
+    font-size: 23px;
+    font-family: 'Secular One', sans-serif;
+  }
+
+  &__log-in {
+    margin-right: 20px;
+    color: #b0dacc;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      color: #040df7;
+    }
+  }
+
+  &__sign-up {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      color: #040df7;
+    }
+  }
+}
