@@ -1,22 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { auth } from '../../api';
 import logo from '../../assets/header/logo.svg';
 import './Header.scss';
 
-const Header = () => {
+const Header = ({ user }) => {
   return (
     <header className='header'>
       <div className='container'>
         <div className='header__content'>
-          <a href='/' className='header__logo'>
+          <Link to='/chat' className='header__logo'>
             <img src={logo} alt='logo' />
-          </a>
+          </Link>
           <div className='header__log-panel'>
-            <a href='#' className='header__log-in'>
-              Log in
-            </a>
-            <a href='#' className='header__sign-up'>
-              Sign up
-            </a>
+            {user ? (
+              <button
+                onClick={() => {
+                  auth.signOut();
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <>
+                <Link to='/login' className='header__log-in'>
+                  Log in
+                </Link>
+                <Link to='/signup' className='header__sign-up'>
+                  Sign Up
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

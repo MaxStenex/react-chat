@@ -1,9 +1,10 @@
 import React from 'react';
 import './Chat.scss';
 import userDefaultPhoto from '../../assets/userDefault.png';
+import { Redirect } from 'react-router-dom';
 
-const Chat = () => {
-  return (
+const Chat = ({ user }) => {
+  return user ? (
     <section className='chat'>
       <div className='container'>
         <div className='chat__wrapper'>
@@ -30,6 +31,8 @@ const Chat = () => {
         </div>
       </div>
     </section>
+  ) : (
+    <Redirect to='login' />
   );
 };
 
