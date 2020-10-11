@@ -15,6 +15,7 @@ const Header = ({ user }) => {
           <div className='header__log-panel'>
             {user ? (
               <button
+                className='header__log-out'
                 onClick={() => {
                   auth.signOut();
                 }}

@@ -70,13 +70,30 @@
 
   &__item {
     margin-right: 5px;
+    width: 100%;
   }
 
   &__button {
-    background-color: transparent;
+    border-radius: 7px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Secular One', sans-serif;
+    background-color: #4f8dc6;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: #1072c9;
+    }
     & img {
-      width: 50px;
-      height: 50px;
+      width: 25px;
+      height: 25px;
+      background-color: #fff;
+    }
+    & span {
+      flex: 1;
     }
   }
 }

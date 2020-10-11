@@ -1,0 +1,31 @@
+.chat {
+  &__send-form {
+    display: flex;
+  }
+
+  &__send-text {
+    resize: none;
+    flex: 1;
+    padding: 10px 20px 5px 5px;
+    word-break: break-all;
+    font-size: 16px;
+  }
+
+  &__send-btn {
+    width: 20%;
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Secular One', sans-serif;
+    background-color: #4f8dc6;
+    transition: 0.2s ease-in-out;
+    &:disabled {
+      &:hover {
+        background-color: #4f8dc6;
+        cursor: wait;
+      }
+    }
+    &:hover {
+      background-color: #1072c9;
+    }
+  }
+}

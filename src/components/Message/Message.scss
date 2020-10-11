@@ -1,0 +1,25 @@
+.messages {
+  &__item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    & img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      border-radius: 50%;
+    }
+    & span {
+      word-break: break-all;
+    }
+    &--self {
+      color: #0081f2;
+      align-self: flex-end;
+      flex-direction: row-reverse;
+      & span {
+        margin-right: 5px;
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ const Login = ({ user }) => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
   };
+
   return user ? (
     <Redirect to='/chat' />
   ) : (
@@ -32,6 +33,7 @@ const Login = ({ user }) => {
           <li className='login-with__item'>
             <button className='login-with__button' onClick={singInWithGoogle}>
               <img src={googleIcon} alt='singInWIthGoogle' />
+              <span>Sign in with google</span>
             </button>
           </li>
         </ul>

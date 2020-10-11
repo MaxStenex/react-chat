@@ -14,30 +14,6 @@
     flex: 1;
     overflow-y: auto;
   }
-
-  &__send-form {
-    display: flex;
-  }
-
-  &__send-text {
-    resize: none;
-    flex: 1;
-    padding: 10px 20px 5px 5px;
-    word-break: break-all;
-    font-size: 16px;
-  }
-
-  &__send-btn {
-    width: 20%;
-    font-size: 25px;
-    color: #fff;
-    font-family: 'Secular One', sans-serif;
-    background-color: #4f8dc6;
-    transition: 0.2s ease-in-out;
-    &:hover {
-      background-color: #1072c9;
-    }
-  }
 }
 
 .messages {
@@ -47,28 +23,5 @@
     padding: 20px 10px 10px 10px;
     display: flex;
     flex-direction: column;
-  }
-
-  &__item {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-    & img {
-      width: 25px;
-      height: 25px;
-      margin-right: 5px;
-    }
-    & span {
-      word-break: break-all;
-    }
-    &--self {
-      color: #0081f2;
-      align-self: flex-end;
-      flex-direction: row-reverse;
-      & span {
-        margin-right: 5px;
-      }
-    }
   }
 }
