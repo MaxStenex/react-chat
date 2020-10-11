@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Chat.scss';
 import { Redirect } from 'react-router-dom';
 import { firestore } from '../../api';
@@ -10,6 +10,10 @@ const Chat = ({ user }) => {
   const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt');
   const [messages] = useCollectionData(query, { idField: 'id' });
+  const chatScroller = useRef();
+  useEffect(() => {
+    chatScroller.current.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
   return user ? (
     <section className='chat'>
@@ -28,6 +32,7 @@ const Chat = ({ user }) => {
                     />
                   );
                 })}
+              <li className='chatScroller' ref={chatScroller}></li>
             </ul>
           </div>
           <MessageForm />

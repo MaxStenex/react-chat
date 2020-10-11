@@ -1,6 +1,7 @@
 .chat {
   &__send-form {
     display: flex;
+    height: 60px;
   }
 
   &__send-text {
@@ -13,6 +14,7 @@
 
   &__send-btn {
     width: 20%;
+    height: 100%;
     font-size: 25px;
     color: #fff;
     font-family: 'Secular One', sans-serif;
