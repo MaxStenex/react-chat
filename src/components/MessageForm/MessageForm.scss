@@ -29,5 +29,8 @@
     &:hover {
       background-color: #1072c9;
     }
+    @media (max-width: 790px) {
+      min-width: 70px;
+    }
   }
 }
