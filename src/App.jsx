@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { auth } from './api';
 import './App.scss';
 import './normalize.scss';
@@ -6,17 +6,17 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import Preloader from './components/Preloader/Preloader';
-import Chat from './components/Chat/Chat';
-import Login from './components/Login/Login';
-import Header from './components/Header/Header';
-import Signup from './components/Signup/Signup';
+const Chat = lazy(() => import('./components/Chat/Chat'));
+const Login = lazy(() => import('./components/Login/Login'));
+const Header = lazy(() => import('./components/Header/Header'));
+const Signup = lazy(() => import('./components/Signup/Signup'));
 
 const App = () => {
   const [user, loading] = useAuthState(auth);
 
   return (
     (loading && <Preloader pageloading />) || (
-      <React.Fragment>
+      <React.Suspense fallback={<Preloader pageloading />}>
         <Header user={user} />
         <main>
           <Switch>
@@ -32,7 +32,7 @@ const App = () => {
             </Route>
           </Switch>
         </main>
-      </React.Fragment>
+      </React.Suspense>
     )
   );
 };
