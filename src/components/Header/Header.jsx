@@ -9,7 +9,7 @@ const Header = ({ user }) => {
     <header className='header'>
       <div className='container'>
         <div className='header__content'>
-          <Link to='/chat' className='header__logo'>
+          <Link to={user ? '/chat' : '/login'} className='header__logo'>
             <img src={logo} alt='logo' />
           </Link>
           <div className='header__log-panel'>

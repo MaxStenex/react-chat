@@ -9,6 +9,7 @@ import Preloader from './components/Preloader/Preloader';
 import Chat from './components/Chat/Chat';
 import Login from './components/Login/Login';
 import Header from './components/Header/Header';
+import Signup from './components/Signup/Signup';
 
 const App = () => {
   const [user, loading] = useAuthState(auth);
@@ -21,6 +22,7 @@ const App = () => {
           <Switch>
             <Route path='/login' render={() => <Login user={user} />} />
             <Route path='/chat' render={() => <Chat user={user} />} />
+            <Route path='/signup' render={() => <Signup user={user} />} />
             <Route exact path='/'>
               {user === null ? (
                 <Redirect to='/login' />

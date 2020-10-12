@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.scss';
-import loginImage from '../../assets/login/login.svg';
-import passImage from '../../assets/login/password.svg';
+import loginImage from '../../assets/common/login.svg';
+import passImage from '../../assets/common/password.svg';
 import googleIcon from '../../assets/login/googleIcon.svg';
 import firebase, { auth } from '../../api';
 import { Redirect } from 'react-router-dom';
@@ -25,7 +25,7 @@ const Login = ({ user }) => {
           </div>
           <div className='login__password'>
             <img src={passImage} alt='password' />
-            <input type='password' placeholder='*****' />
+            <input type='password' placeholder='Password' />
           </div>
           <button className='login__join-btn'>Log in</button>
         </form>
