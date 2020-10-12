@@ -49,10 +49,11 @@
     display: flex;
     background-color: #93c3ed;
     border-radius: 10px;
+    margin-bottom: 15px;
   }
 
   &__join-btn {
-    margin-top: 35px;
+    margin-top: 15px;
     border-radius: 7px;
     width: 100%;
     font-size: 25px;
@@ -65,11 +66,21 @@
       background-color: #1072c9;
     }
   }
+  &__error {
+    font-size: 17px;
+    color: #fc2d2d;
+    margin-bottom: 7px;
+    display: block;
+    font-family: 'Secular One', sans-serif;
+    &--global {
+      margin-top: 7px;
+    }
+  }
 }
 
 .login-with {
   display: flex;
-  margin-top: 35px;
+  margin-top: 15px;
 
   &__item {
     width: 100%;
